@@ -1,8 +1,8 @@
 <template>
 
-  <div class="common-layout">
+  <div class="common-layout bk">
     <el-container>
-      <el-header height="80px">
+      <el-header height="80px" >
         <Header/>
       </el-header>
       <el-main>
@@ -11,7 +11,6 @@
       <el-footer>Footer</el-footer>
     </el-container>
   </div>
-
 
 </template>
 
@@ -28,5 +27,7 @@ export default {
 </script>
 
 <style scoped>
-
+.bk{
+  background-color: #303133;
+}
 </style>

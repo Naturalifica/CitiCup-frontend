@@ -6,4 +6,7 @@
 </template>
 
 <style scoped>
+page{
+  background-color: #161622;
+}
 </style>
