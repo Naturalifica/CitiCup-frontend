@@ -2,7 +2,7 @@
   <div class="index">
     <!-- 跑马灯  -->
     <div>
-      <el-carousel :interval="5000" height="500px">
+      <el-carousel :interval="5000" height="550px">
         <el-carousel-item v-for="item in imgList" :key="item.id">
           <img :src="item.idView" class="image">
         </el-carousel-item>
@@ -33,8 +33,8 @@ export default {
 .index{
   background: #c8cfd8;
   text-align: center;
-  margin-left: 142px;
-  width: 80.6%;
+  margin-left: 0px;
+  width: 100%;
 }
 .el-carousel__item h3 {
   color: #475669;
