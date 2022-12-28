@@ -17,10 +17,10 @@ export default {
   data(){
     return {
       imgList: [
-        {id:0,idView:'../assets/images/logo1.png'},
-        {id:1,idView:'../assets/images/logo1.png'},
-        {id:2,idView:'../assets/images/logo1.png'},
-        {id:3,idView:'../assets/images/logo1.png'},
+        {id:0,idView:'src/assets/images/logo1.png'},
+        {id:1,idView:'src/assets/images/logo1.png'},
+        {id:2,idView:'src/assets/images/logo1.png'},
+        {id:3,idView:'src/assets/images/logo1.png'},
       ]
     };
   },
