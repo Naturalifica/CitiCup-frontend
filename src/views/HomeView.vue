@@ -10,18 +10,18 @@
         <div style="height: 40px; line-height: 70px; display: flex"/>
         <div class="font_div1">关于我们</div>
         <div style="height: 20px; line-height: 20px; border-bottom: 1px solid #ccc; display: flex"/>
-        <div style="height: 80px; line-height: 70px; display: flex"/>
+        <div style="height: 30px; line-height: 70px; display: flex"/>
         <div class="font_div1">做市服务</div>
-        <div style="height: 80px; line-height: 70px; display: flex"/>
+        <div style="height: 30px; line-height: 70px; display: flex"/>
         <Service/>
-        <div style="height: 40px; line-height: 70px; display: flex"/>
+        <div style="height: 20px; line-height: 70px; display: flex"/>
         <div class="font_div1">特色模块</div>
-        <div style="height: 80px; line-height: 70px; display: flex"/>
-        <Service/>
+        <div style="height: 40px; line-height: 70px; display: flex"/>
+        <Module/>
       </el-main>
       <el-footer>
         <div style="height: 80px; line-height: 70px; display: flex"/>
-        <div class="font_div1">Ending</div>
+        <div class="font_div2">Ending</div>
       </el-footer>
     </el-container>
   </div>
@@ -32,11 +32,12 @@
 import Header from "../components/Header.vue";
 import Carousel from "../components/Carousel.vue";
 import Service from "../components/Service.vue";
+import Module from "../components/Module.vue";
 
 export default {
   name: "HomePage",
   components: {
-    Header, Carousel, Service,
+    Header, Carousel, Service, Module,
   },
 }
 </script>
@@ -50,6 +51,13 @@ export default {
   font-weight: bold; /*加粗*/
   text-align: center; /* 水平居中 */
   color: azure;
+  font: 20px/30px "Microsoft YaHei";
+}
+
+.font_div2 {
+  font-weight: bold; /*加粗*/
+  text-align: center; /* 水平居中 */
+  color: #1a1a1a;
   font: 20px/30px "Microsoft YaHei";
 }
 

@@ -1,30 +1,36 @@
 <template>
   <el-row :gutter="40" >
-    <el-col :span="5"></el-col>
-    <el-col :span="8">
+    <el-col :span="2"></el-col>
+    <el-col :span="7">
+      <!--图片需要设置大小为 300*300-->
+      <img src="../assets/images/service1.jpeg" title="行情揭示">
+    </el-col>
+    <el-col :span="7">
       <!--图片需要设置大小为 300*300-->
       <img src="../assets/images/service1.jpeg" title="行情揭示">
     </el-col>
     <el-col :span="7">
       <img src="../assets/images/service1.jpeg" title="行情揭示">
     </el-col>
-    <el-col :span="4"></el-col>
   </el-row>
-  <el-row :gutter="40">
-    <el-col :span="5"></el-col>
-    <el-col :span="8">
+  <el-row :gutter="40" >
+    <el-col :span="2"></el-col>
+    <el-col :span="7">
+      <!--图片需要设置大小为 300*300-->
+      <img src="../assets/images/service1.jpeg" title="行情揭示">
+    </el-col>
+    <el-col :span="7">
+      <!--图片需要设置大小为 300*300-->
       <img src="../assets/images/service1.jpeg" title="行情揭示">
     </el-col>
     <el-col :span="7">
       <img src="../assets/images/service1.jpeg" title="行情揭示">
     </el-col>
-    <el-col :span="4"></el-col>
   </el-row>
 </template>
-
 <script>
 export default {
-  name: "Service"
+  name: "Module"
 }
 </script>
 
