@@ -17,7 +17,7 @@ export default {
   data(){
     return {
       imgList: [
-          //注意调整大小为1100 * 500
+          //注意调整大小为1400 * 550
         {id:0,idView:'src/assets/images/carousel1.jpeg'},
         {id:1,idView:'src/assets/images/carousel2.jpeg'},
         {id:2,idView:'src/assets/images/carousel3.jpeg'},

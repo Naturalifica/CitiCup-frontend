@@ -51,13 +51,13 @@ export default {
   font-weight: bold; /*加粗*/
   text-align: center; /* 水平居中 */
   color: azure;
-  font: 20px/30px "Microsoft YaHei";
+  font: 30px/40px "Microsoft YaHei";
 }
 
 .font_div2 {
   font-weight: bold; /*加粗*/
   text-align: center; /* 水平居中 */
-  color: #1a1a1a;
+  color: #475669;
   font: 20px/30px "Microsoft YaHei";
 }
 
