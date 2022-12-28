@@ -42,7 +42,7 @@ export default {
 .font_div1{
   font-weight:bold;/*加粗*/
   text-align:center;   /* 水平居中 */
-  color: #c8cfd8;
+  color: azure;
   font: 20px/30px "Microsoft YaHei";
 }
 </style>
