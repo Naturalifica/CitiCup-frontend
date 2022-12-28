@@ -3,8 +3,8 @@
   <div style="height: 50px; line-height: 50px; border-bottom: 1px solid #ccc; display: flex">
     <div style="width: 200px; padding-left: 30px; font-weight: bold; color: #EBEDF0">平台</div>
     <div style="flex: 1; display: flex; justify-content: space-around">
-      <div style="width: 100px; text-align: center; cursor: pointer" @click="goHome">首页</div>
-      <div style="width: 100px; text-align: center; cursor: pointer" @click="goAbout">关于</div>
+      <div style="width: 100px; text-align: center; cursor: pointer; color: #EBEDF0" @click="goHome">首页</div>
+      <div style="width: 100px; text-align: center; cursor: pointer; color: #EBEDF0" @click="goAbout">关于</div>
     </div>
     <div style="width: 125px">
       <el-dropdown>
@@ -22,7 +22,7 @@
         </template>
       </el-dropdown>
     </div>
-    <div style="width: 100px; text-align: center; cursor: pointer" @click="goLogin">登录</div>
+    <div style="width: 100px; text-align: center; cursor: pointer; color: #EBEDF0" @click="goLogin">登录</div>
   </div>
 </template>
 
