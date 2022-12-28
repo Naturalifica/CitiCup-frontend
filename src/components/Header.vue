@@ -1,7 +1,9 @@
 <template>
 
   <div style="height: 70px; line-height: 70px; border-bottom: 1px solid #ccc; display: flex">
-    <div style="width: 100px; padding-left: 10px; font-weight: bold; color: #EBEDF0">平台</div>
+    <div>
+      <img src="../assets/images.logo1.png" alt="图片未加载">
+    </div>
     <div style="flex: 1; display: flex; justify-content: space-around">
       <div style="width: 100px; text-align: center; cursor: pointer; color: #EBEDF0" @click="goHome">首页</div>
       <div style="width: 100px; text-align: center; cursor: pointer; color: #EBEDF0" @click="goAbout">关于</div>
