@@ -1,16 +1,24 @@
 <template>
 
-  <div style="height: 50px; line-height: 50px; border-bottom: 1px solid #ccc; display: flex">
-    <div style="width: 200px; padding-left: 30px; font-weight: bold; color: #EBEDF0">平台</div>
+  <div style="height: 70px; line-height: 70px; border-bottom: 1px solid #ccc; display: flex">
+    <div style="width: 100px; padding-left: 10px; font-weight: bold; color: #EBEDF0">平台</div>
     <div style="flex: 1; display: flex; justify-content: space-around">
       <div style="width: 100px; text-align: center; cursor: pointer; color: #EBEDF0" @click="goHome">首页</div>
       <div style="width: 100px; text-align: center; cursor: pointer; color: #EBEDF0" @click="goAbout">关于</div>
+      <div style="width: 100px; text-align: center; cursor: pointer; color: #EBEDF0" @click="goLogin">登录</div>
     </div>
     <div style="width: 125px">
       <el-dropdown>
-        <el-button type="default">
-          做市服务<el-icon><ArrowDownBold /></el-icon>
-        </el-button>
+        <div style="padding-top: 20px">
+          <el-button type="default">
+            做市服务
+            <el-icon>
+              <ArrowDownBold/>
+            </el-icon>
+          </el-button>
+        </div>
+
+
         <template #dropdown>
           <el-dropdown-menu>
             <el-dropdown-item>账户管理</el-dropdown-item>
@@ -22,7 +30,7 @@
         </template>
       </el-dropdown>
     </div>
-    <div style="width: 100px; text-align: center; cursor: pointer; color: #EBEDF0" @click="goLogin">登录</div>
+
   </div>
 </template>
 
@@ -31,9 +39,7 @@
 export default {
   name: "Header",
   data() {
-    return {
-
-    }
+    return {}
   }
 }
 </script>
@@ -42,9 +48,11 @@ export default {
 .el-row {
   margin-bottom: 20px;
 }
+
 .el-row:last-child {
   margin-bottom: 0;
 }
+
 .el-col {
   border-radius: 4px;
 }
