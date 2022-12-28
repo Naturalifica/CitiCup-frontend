@@ -2,7 +2,7 @@
   <div class="index">
     <!-- 跑马灯  -->
     <div>
-      <el-carousel :interval="5000" height="300px">
+      <el-carousel :interval="5000" height="500px">
         <el-carousel-item v-for="item in imgList" :key="item.id">
           <img :src="item.idView" class="image">
         </el-carousel-item>
@@ -17,10 +17,11 @@ export default {
   data(){
     return {
       imgList: [
-        {id:0,idView:'src/assets/images/logo1.png'},
-        {id:1,idView:'src/assets/images/logo1.png'},
-        {id:2,idView:'src/assets/images/logo1.png'},
-        {id:3,idView:'src/assets/images/logo1.png'},
+          //注意调整大小为1100 * 500
+        {id:0,idView:'src/assets/images/carousel1.jpeg'},
+        {id:1,idView:'src/assets/images/carousel2.jpeg'},
+        {id:2,idView:'src/assets/images/carousel3.jpeg'},
+        {id:3,idView:'src/assets/images/carousel4.jpeg'},
       ]
     };
   },
@@ -31,11 +32,9 @@ export default {
 <style>
 .index{
   background: #c8cfd8;
-  width: 80%;
   text-align: center;
   margin-left: 142px;
   width: 80.6%;
-
 }
 .el-carousel__item h3 {
   color: #475669;
