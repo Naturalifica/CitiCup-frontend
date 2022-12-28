@@ -7,10 +7,17 @@
       </el-header>
       <el-main>
         <Carousel/>
-        <div style="height: 30px; line-height: 70px; display: flex"/>
-          <div class="font_div">关于我们</div>
+        <div style="height: 80px; line-height: 70px; display: flex"/>
+          <div class="font_div1">关于我们</div>
+        <div style="height: 80px; line-height: 70px; display: flex"/>
+        <div class="font_div1">做市服务</div>
+        <div style="height: 80px; line-height: 70px; display: flex"/>
+        <div class="font_div1">特色模块</div>
       </el-main>
-      <el-footer></el-footer>
+      <el-footer>
+        <div style="height: 80px; line-height: 70px; display: flex"/>
+        <div class="font_div1">Ending</div>
+      </el-footer>
     </el-container>
   </div>
 
@@ -32,9 +39,10 @@ export default {
 .bk{
   background-color: #303133;
 }
-.font_div{
+.font_div1{
   font-weight:bold;/*加粗*/
   text-align:center;   /* 水平居中 */
   color: #c8cfd8;
+  font: 20px/30px "Microsoft YaHei";
 }
 </style>
