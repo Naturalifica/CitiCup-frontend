@@ -2,6 +2,9 @@
 
   <div class="common-layout bk">
     <el-container>
+      <el-header height="80px">
+        <Header/>
+      </el-header>
       <el-main>
         <div class="font_div1">关于我们</div>
         <div style="height: 20px; line-height: 20px; border-bottom: 1px solid #ccc; display: flex"/>
