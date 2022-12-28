@@ -42,6 +42,17 @@ export default {
   name: "Header",
   data() {
     return {}
+  },
+  methods: {
+    goHome() {
+      this.$router.push({path: '/'})
+    },
+    goAbout() {
+      this.$router.push({path: '/about'})
+    },
+    goLogin() {
+      this.$router.push({path: '/login'})
+    }
   }
 }
 </script>
