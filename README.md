@@ -44,3 +44,6 @@ npm install && npm run dev
 
 ### 3. 项目的时间安排
 
+
+动画效果: animate.css
+路由: vue-router
