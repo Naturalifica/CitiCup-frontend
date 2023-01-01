@@ -1,3 +1,6 @@
+
+<!--Alert的职责-->
+<!--显示hintTxt，如果点击的话会出现弹窗-->
 <template>
   <el-button text @click="open" style="font-size: 1.2em; color: rgb(40, 151, 255);">{{hintTxt}}</el-button>
 </template>

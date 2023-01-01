@@ -2,53 +2,27 @@
   <div class="mainfooter _mainfooter">
     <div class="footerbody _footerbody">
       <div>
-        <h1>选购及了解</h1>
-        <p>Mac</p>
-        <p>iPad</p>
-        <p>iPhone</p>
-        <p>Watch</p>
-        <p>Music</p>
-        <p>AirPods</p>
+        <h1>关于我们</h1>
+        <p>为客户保驾护航</p>
+        <p>风控全流程分析</p>
+        <p>全流程风控解决方案</p>
+        <p>首席AI风控官</p>
       </div>
       <div>
-        <h1>服务</h1>
-        <p>Apple Music</p>
-        <p>iCloud</p>
-        <h1>账户</h1>
-        <p>管理你的Apple ID</p>
-        <p>Apple Store账户</p>
-
+        <h1>做市服务</h1>
+        <p>行情揭示</p>
+        <p>交易管理</p>
+        <p>策略管理</p>
+        <p>风险控制</p>
       </div>
       <div>
-        <h1>Apple零售店</h1>
-        <p>查找零售店</p>
-        <p>在线选购</p>
-        <p>Apple夏令营</p>
-        <p>优惠和更新</p>
-        <p>分期付款</p>
-        <p>订单状态</p>
-        <p>选购帮助</p>
-      </div>
-      <div>
-        <h1>商务应用</h1>
-        <p>Apple与商务</p>
-        <p>商务选购</p>
-        <h1>教育应用</h1>
-        <p>Apple与教育</p>
-        <p>在校师生选购</p>
-      </div>
-      <div>
-        <h1>Apple价值观</h1>
-        <p>辅助功能</p>
-        <p>环境责任</p>
-        <p>隐私</p>
-        <p>供应商责任</p>
-        <h1>关于Apple</h1>
-        <p>Apple管理层</p>
-        <p>工作机会</p>
-        <p>创造机会</p>
-        <p>活动</p>
-        <p>联系Apple</p>
+        <h1>特色模块</h1>
+        <p>深度强化学习交易策略</p>
+        <p>科创板股票定价</p>
+        <p>系统性风险预警</p>
+        <p>行业前景提示</p>
+        <p>上市前五天公司做市</p>
+        <p>未盈利公司做市</p>
       </div>
     </div>
     <div class="footerbottom _footerbottom">

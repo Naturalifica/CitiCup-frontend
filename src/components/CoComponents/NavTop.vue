@@ -5,13 +5,12 @@
     <div id="navID" class="main-nav-list _main-nav-list">
       <div class="nav-list-close"><i @click="closeMenu()" class="iconfont icon-close"></i></div>
       <div @click="routerPush('/')">首页</div>
-      <div @click="routerPush('/about')">关于我们</div>
+      <div @click="routerPush('/'); toAboutUs()">关于我们</div>
       <div @click="routerPush('/account')">账户</div>
       <div style="width: 125px; align-items: center; justify-content: center">
         <el-dropdown>
           <div>
-            <el-button type="default">
-              做市服务
+            <el-button type="default" text style="color: white" plain>做市服务
               <el-icon>
                 <ArrowDownBold/>
               </el-icon>
@@ -28,19 +27,18 @@
           </template>
         </el-dropdown>
       </div>
-      <div>
-        <i class="iconfont icon-sousuo1"></i>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-
+import Home from "~/components/Home/Home.vue";
+import {onMounted, ref} from "vue";
 
 export default {
   name: 'NavTop',
   components: {
+    Home
   },
   data() {
     return {
@@ -71,7 +69,8 @@ export default {
       if(dom.classList.contains('navlistshow')){
         dom.classList.remove('navlistshow')
       }
-    }
+    },
+
   },
 }
 </script>
@@ -159,19 +158,14 @@ export default {
       flex-direction: column;
       position: absolute;
       //屏幕宽度小于800，默认清空下菜单是关闭的
-      display: none;
-      position:fixed;
       left: 0;
-      top: 0 !important;
-      z-index: 1999 !important;
-      padding-top: 40px !important;
       width: 100%;
       height: 100%;
       color:rgb(214, 214, 214);
       background-color: rgba(0, 0, 0,0.95);
       top: 40px;
       padding: 0 40px;
-      z-index: 999;
+      z-index: 998;
       div{
         text-align: left;
         height: 40px;
