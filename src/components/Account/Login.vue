@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     submitForm(form) {
-      router.push('')
+      this.$store.commit('changeLogin')
     },
   },
   name: 'Login',

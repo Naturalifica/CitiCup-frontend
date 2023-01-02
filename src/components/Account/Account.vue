@@ -1,20 +1,10 @@
 <template>
   <div class="home-container _home-container">
-    <div style="margin-top: 20px; margin-bottom: 100px;">
-      <div class="sub-title">账户</div>
-      <div class="login-sub-div _login-sub-div">
-        <div class="middle">
-          <el-form :model="form" label-width="60px">
-            <el-form-item label="用户名" style="font-size: medium" >
-              <el-input v-model="form.username" placeholder="请输入用户名"/>
-            </el-form-item>
-            <el-form-item label="密码" style="font-size: medium">
-              <el-input v-model="form.password" type="password" autocomplete="off" placeholder="请输入密码"/>
-            </el-form-item>
-            <el-button type="primary" text style="font-size: medium" @click="addUser(form)"
-            >注册</el-button>
-          </el-form>
-        </div>
+    <div style="margin-top: 20px; margin-bottom: 30px;">
+      <div class="sub-title">账户管理</div>
+      <div v-if="this.$store.state.isLogin"></div>
+      <div v-else>
+        <router-link to="/login" style="font-size: large; color: #409EFF">点击登录</router-link>
       </div>
     </div>
   </div>

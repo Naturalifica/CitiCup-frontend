@@ -1,16 +1,19 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 
-//挂载Vuex
-Vue.use(Vuex)
-
-//创建VueX对象
-const store = new Vuex.Store({
-    state:{
-        //存放的键值对就是所要管理的状态
-        isLogin: false,
-        isAdmin: false,
+const store = createStore({
+    state () {
+        return {
+            isLogin: false,
+            isAdmin: false,
+        }
+    },
+    mutations: {
+        changeLogin (state) {
+            state.isLogin = true
+            console.log('changeLogin: login state is ' + state.isLogin)
+        },
     }
 })
+
 
 export default store
