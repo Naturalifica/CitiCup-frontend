@@ -5,7 +5,7 @@
     <div id="navID" class="main-nav-list _main-nav-list">
       <div class="nav-list-close"><i @click="closeMenu()" class="iconfont icon-close"></i></div>
       <div @click="routerPush('/')">首页</div>
-      <div @click="routerPush('/'); toAboutUs()">关于我们</div>
+      <div @click="routerPush('/')">关于我们</div>
       <div @click="routerPush('/account')">账户</div>
       <div style="width: 125px; align-items: center; justify-content: center">
         <el-dropdown>
