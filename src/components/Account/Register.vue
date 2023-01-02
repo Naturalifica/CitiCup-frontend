@@ -4,7 +4,7 @@
       <div class="sub-title">注册您的账户</div>
       <div class="login-sub-div _login-sub-div">
         <div class="middle">
-          <el-form :model="form" label-width="60px">
+          <el-form :ref="form" model="form" label-width="60px">
             <el-form-item label="用户名" style="font-size: medium" >
               <el-input v-model="form.username" placeholder="请输入用户名"/>
             </el-form-item>
@@ -28,11 +28,14 @@ export default {
       form:{
         username: '',
         password: '',
-      }
+      },
+      successFlag : '200',
+      failFlag: '404',
+      postUrl: 'http://localhost:8080',
     }
   },
   methods: {
-    addUser(form) {
+    addUser() {
 
     },
   },

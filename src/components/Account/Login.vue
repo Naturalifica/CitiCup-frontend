@@ -4,7 +4,7 @@
       <div class="sub-title">登录您的账户</div>
       <div class="login-sub-div _login-sub-div">
         <div class="middle">
-          <el-form :model="form" label-width="60px">
+          <el-form :ref="form" :model="form" label-width="60px">
             <el-form-item label="用户名" style="font-size: medium" >
               <el-input v-model="form.username" placeholder="请输入用户名"/>
             </el-form-item>
@@ -30,12 +30,35 @@ export default {
       form:{
         username: '',
         password: '',
-      }
+      },
+      successFlag : '200',
+      failFlag: '404',
+      postUrl: 'http://localhost:8080',
     }
   },
   methods: {
-    submitForm(form) {
-      this.$store.commit('changeLogin')
+    submitForm() {
+      this.$refs["form"].validate((valid) => {
+        if (valid) {
+          request.post(this.postUrl, {
+            //传入变量
+            username: this.form.username,
+            password: this.form.password,
+          })
+              .then((res) => {
+                console.log(res)
+                if (res.result === this.successFlag) {
+                  this.$message({message: '登录成功', type: 'success'});
+                  this.$store.commit('changeLogin')
+                  this.$router.push('');
+                } else if (res.result === this.failFlag) {
+                  this.$message.error('账号密码不正确');
+                }
+              })
+        } else {
+          this.$message.error('登录失败');
+        }
+      })
     },
   },
   name: 'Login',
