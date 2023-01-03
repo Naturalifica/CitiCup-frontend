@@ -4,17 +4,19 @@
       <div class="sub-title">登录您的账户</div>
       <div class="login-sub-div _login-sub-div">
         <div class="middle">
-          <el-form :ref="form" :model="form" label-width="60px">
-            <el-form-item label="用户名" style="font-size: medium" >
+          <el-form :model="form" label-width="60px">
+            <el-form-item label="用户名" style="font-size: medium">
               <el-input v-model="form.username" placeholder="请输入用户名"/>
             </el-form-item>
             <el-form-item label="密码" style="font-size: medium">
               <el-input v-model="form.password" type="password" autocomplete="off" placeholder="请输入密码"/>
             </el-form-item>
-            <el-button type="primary" text style="font-size: medium" @click="submitForm(form)"
-            >登录</el-button>
+            <el-button type="primary" text style="font-size: medium" @click="submitForm()"
+            >登录
+            </el-button>
             <el-button type="primary" text style="font-size: medium" @click="$router.push('/account/register')"
-            >注册</el-button>
+            >注册
+            </el-button>
           </el-form>
         </div>
       </div>
@@ -24,41 +26,46 @@
 
 <script>
 
+import axios from "axios";
+
 export default {
   data() {
-    return{
-      form:{
+    return {
+      form: {
         username: '',
         password: '',
       },
-      successFlag : '200',
-      failFlag: '404',
+      successFlag: '200',
+      failFlag: '400',
       postUrl: 'http://localhost:8080',
     }
   },
   methods: {
     submitForm() {
-      this.$refs["form"].validate((valid) => {
-        if (valid) {
-          request.post(this.postUrl, {
-            //传入变量
-            username: this.form.username,
-            password: this.form.password,
+
+      axios({
+            method: 'post',
+            url: this.postUrl,
+            data: {
+              //传入变量
+              username: this.form.username,
+              password: this.form.password,
+            }
+          }
+      )
+          .then((res) => {
+            console.log(res)
+            if (res.status === this.successFlag) {
+              this.$message.success('登录成功');
+              this.$store.commit('changeLogin')
+              this.$router.push('account');
+            } else if (res.status === this.failFlag) {
+              this.$message.error('账号密码不正确');
+            }
           })
-              .then((res) => {
-                console.log(res)
-                if (res.result === this.successFlag) {
-                  this.$message({message: '登录成功', type: 'success'});
-                  this.$store.commit('changeLogin')
-                  this.$router.push('');
-                } else if (res.result === this.failFlag) {
-                  this.$message.error('账号密码不正确');
-                }
-              })
-        } else {
-          this.$message.error('登录失败');
-        }
-      })
+          .catch((err) => {
+            this.$message.error('登录失败');
+          })
     },
   },
   name: 'Login',
@@ -66,26 +73,29 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.sub-title{
+.sub-title {
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
   height: 10vh;
-  font:bolder 35px/50px Arial;
+  font: bolder 35px/50px Arial;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 5vh;
   color: #242424;
 }
+
 // 大于800px
-@media only screen and (min-width: 800px){
-  .home-container{
+@media only screen and (min-width: 800px) {
+  .home-container {
     font-size: 1vw;
-    .login-sub-div{
+
+    .login-sub-div {
       width: 100%;
       display: flex;
       justify-content: center;
       font-size: .5em;
-      .middle{
+
+      .middle {
         width: 30%;
         height: 100%;
         font-size: .8em;
@@ -97,15 +107,17 @@ export default {
 }
 
 // 小于800px
-@media only screen and (max-width: 800px){
-  ._home-container{
+@media only screen and (max-width: 800px) {
+  ._home-container {
     font-size: 1vw;
-    .login-sub-div{
+
+    .login-sub-div {
       width: 100%;
       display: flex;
       justify-content: center;
       font-size: .5em;
-      .middle{
+
+      .middle {
         width: 30%;
         height: 100%;
         font-size: .8em;
@@ -116,7 +128,7 @@ export default {
   }
 }
 
-.about-txt{
+.about-txt {
   font-size: 20px;
   font-weight: bold;
 
