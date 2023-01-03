@@ -57,6 +57,7 @@ a-->b((Account))
 b-->j((Login))
 b-->k((Register))
 a-->d((Home))
+d-->l((BriefInfo))
 a-->e((Market))
 a-->f((Risk))
 a-->g((Strategy))
@@ -197,7 +198,7 @@ npm run dev
 
 ## 5. 一些工具
 
-> 这里只提供一个名词，大家自行了解一下详情
+> 这里只提供一个名词，大家**自行了解一下详情**
 >
 > 其实这里我也没怎么用，这些都是比较高级的用法，用来减少大家工作量的。大家可以根据自己的情况来了解
 
@@ -210,7 +211,7 @@ npm run dev
 
 - windicss
 
-- elementUI
+- [elementUI](https://element-plus.gitee.io/zh-CN/)
 
 
 
@@ -222,7 +223,22 @@ npm run dev
 
 
 
+### 5.3. 图片
 
+- https://wallhaven.cc/
+- https://bz.zzzmh.cn/index
+- https://www.pexels.com/zh-cn/ --> 很好
+
+
+
+
+
+
+
+
+
+## 6. 当前的问题
+### 6.1. 
 
 
 

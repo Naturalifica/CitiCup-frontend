@@ -9,6 +9,10 @@
 
       <div style="margin-top: 100px; margin-bottom: 100px;">
         <div class="sub-title">做市服务</div>
+
+
+
+
         <div class="service-sub-div _service-sub-div">
           <div class="left">
             <BriefInfo :header-title="'行情揭示'" :header-info="'Market Revealed'" :header-font-color="'black'" :background-color="'rgb(19, 18, 25)'"
@@ -19,6 +23,11 @@
                        :show-alert="false" :header-title-font-size="3" :imgSrc="'src/components/Home/images/manage.jpg'" @click="$router.push('trading')"/>
           </div>
         </div>
+
+
+
+
+
         <div class="service-sub-div _service-sub-div" style="padding-bottom: 2vh; border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
           <div class="left">
             <BriefInfo :header-title="'策略管理'" :header-info="'Strategy Management'" :header-font-color="'white'" :backgoundColor="'rgb(19, 18, 25)'"
@@ -287,6 +296,8 @@ export default {
   }
 }
 </script>
+
+
 <style lang="less" scoped>
 
 .about-us-box{
@@ -306,7 +317,7 @@ export default {
   //这里的Arial表示一种字体(还挺好看的说)
   font:bolder 40px/50px Arial;
   color: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
   margin-bottom: 5vh;
 
 }

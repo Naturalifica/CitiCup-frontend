@@ -15,7 +15,6 @@
                   :there-exists-an-alert="thereExistsAnAlert"/>
       </div>
     </div>
-
 </template>
 
 <script>
