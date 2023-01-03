@@ -1,5 +1,5 @@
 <template>
-  <div class="index">
+  <div class="index;" :style="'z-index: ' + String(zIndex)">
     <!-- 跑马灯  -->
     <div>
       <!--这里高度为100vh表示高度为页面视角的100%-->
@@ -8,9 +8,9 @@
         <el-carousel-item v-for="item in imgList" :key="item.id" >
           <div class="txt-box" >
             <h1>{{item.title}}</h1>
-            <div style="width: 80%; margin: auto">{{item.content}}</div>
+            <div style="width: 80%; margin: auto;">{{item.content}}</div>
           </div>
-          <img :src="item.path" class="img-box">
+          <img :src="item.path" class="img-box" :alt="imgList.title">
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -22,7 +22,7 @@
 //
 export default {
   name: 'index',
-  props:['imgList', 'height']
+  props:['imgList', 'height', 'zIndex']
 }
 </script>
 <style lang="less">

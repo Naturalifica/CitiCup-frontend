@@ -1,6 +1,6 @@
 <template>
-  <div class="mainfooter _mainfooter">
-    <div class="footerbody _footerbody">
+  <div class="main-footer _main-footer">
+    <div class="footer-body _footer-body">
       <div>
         <h1>关于我们</h1>
         <p>为客户保驾护航</p>
@@ -25,7 +25,7 @@
         <p>未盈利公司做市</p>
       </div>
     </div>
-    <div class="footerbottom _footerbottom">
+    <div class="footer-bottom _footer-bottom">
       <p>Copyright © SSE STAR Market Maker 保留所有权利。</p>
       <p>京ICP备114514191 营业执照 无线电发射设备销售备案编号1145141919810</p>
       <p>再看，再看就把你吃掉！</p>
@@ -45,11 +45,11 @@ export default {
 
 <style lang="less" scoped>
 @media only screen and (min-width: 800px){
-  .mainfooter{
+  .main-footer{
     display: flex;
     flex-direction: column;
     width: 100%;
-    .footerbody{
+    .footer-body{
       display: flex;
       justify-content: space-around;
       text-align: left;
@@ -70,7 +70,7 @@ export default {
         }
       }
     }
-    .footerbottom{
+    .footer-bottom{
       margin: 7px 0;
       p{
         font-size: 10px;
@@ -81,12 +81,12 @@ export default {
 }
 
 @media only screen and (max-width: 800px){
-  ._mainfooter{
+  ._main-footer{
     display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: start;
-    ._footerbody{
+    ._footer-body{
       width: 100%;
       display: flex;
       justify-content: space-around;
@@ -95,7 +95,6 @@ export default {
       border-top: 1px solid rgba(0, 0, 0, 0.1);
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       // height: 500px;
-      display: flex;
       flex-direction: column;
       align-items: center;
       // margin:0 10%;
@@ -119,7 +118,7 @@ export default {
         }
       }
     }
-    ._footerbottom{
+    ._footer-bottom{
       margin: 7px 0;
       p{
         font-size: 10px;

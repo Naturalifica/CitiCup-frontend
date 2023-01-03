@@ -16,17 +16,21 @@ alias:{
 
 
 
-#### 1.2. pages
-
-pages文件夹下所有的vue文件都代表一个页面，其中 index.vue 应当表示一个主页面，在其中点击可跳转至其他界面
+#### 1.2. components
 
 ```mermaid
 graph TD
-a((index.vue)) --> b((login.vue))
-a --> c((service.vue))
-a --> d((about.vue))
-e((404.vue))
+a((components))-->c((CoComponents))
+a-->b((Account))
+a-->d((Home))
+a-->e((Market))
+a-->f((Risk))
+a-->g((Strategy))
+a-->h((Trading))
 ```
+其中CoComponents表示剩下六个页面共同使用的组件，其它每个文件夹表示一个页面。
+除了CoComponents文件夹外，每个文件夹下包括一个和文件夹同名的组件，表示这个页面的主要组件；
+还（可能）包括images子文件夹和subComponents子文件夹，它们的作用如名。
 
 #### 1.3. router
 
@@ -46,4 +50,15 @@ npm install && npm run dev
 
 
 动画效果: animate.css
+
+style.css
+
+windicss
+
+elementUI
+
 路由: vue-router
+
+组件之间共享方法和数据: 
+[vuex](https://blog.csdn.net/qq_45934504/article/details/123462736), 
+[猴子都能看懂的VueX教程](https://juejin.cn/post/6928468842377117709)

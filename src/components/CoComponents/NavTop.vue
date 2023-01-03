@@ -1,16 +1,18 @@
 <template>
   <div class="nav-container _nav-container">
-    <div class="nav-icon _nav-icon"><i class="iconfont icon-menu" @click="openMenu()"></i></div>
-    <div class="apple-icon _apple-icon"><i class="iconfont icon-apple" @click="$router.push('/home')"></i></div>
+
     <div id="navID" class="main-nav-list _main-nav-list">
-      <div class="nav-list-close"><i @click="closeMenu()" class="iconfont icon-close"></i></div>
+      <div class="nav-list-close"><i @click="closeMenu" class="iconfont icon-close"></i></div>
+      <div style="margin-left: 0; display: flex">
+        <img src="src/components/CoComponents/images/logo.png" alt="logo">
+      </div>
       <div @click="routerPush('/')">首页</div>
       <div @click="routerPush('/'); toAboutUs()">关于我们</div>
       <div @click="routerPush('/account')">账户</div>
       <div style="width: 125px; align-items: center; justify-content: center">
-        <el-dropdown>
+        <el-dropdown >
           <div>
-            <el-button type="default" text style="color: white" plain>做市服务
+            <el-button text type="default" class="service" style="color: rgb(214, 214, 214);" plain>做市服务
               <el-icon>
                 <ArrowDownBold/>
               </el-icon>
@@ -33,8 +35,6 @@
 
 <script>
 import Home from "~/components/Home/Home.vue";
-import {onMounted, ref} from "vue";
-
 export default {
   name: 'NavTop',
   components: {
@@ -47,7 +47,9 @@ export default {
   },
   methods: {
     routerPush(to){
-      this.$router.push(to)
+      this.$router.push({
+        path: to,
+      })
       // 跳转之后，记得关闭菜单（在屏幕宽度小于800的时候才生效）
       let dom = document.getElementById('navID')
       if(dom.classList.contains('navlistshow')){
@@ -71,13 +73,21 @@ export default {
       }
     },
 
+    toAboutUs(){
+
+    }
+
   },
 }
 </script>
 
 <style lang="less" scoped>
 
-
+.service{
+  :hover{
+    color: black;
+  }
+}
 // 大于800px
 @media only screen and (min-width: 800px){
   .nav-container{
@@ -87,7 +97,6 @@ export default {
     justify-content: center;
     height: 50px;
     background-color: rgb(51, 51, 51);
-    //background-color: black;
     color:rgb(214, 214, 214);
     .nav-icon{
       display:none;
@@ -96,18 +105,13 @@ export default {
     .nav-icon:hover{
       color:white;
     }
-    .apple-icon{
-      width: 100px;
-      cursor: pointer;
-    }
-    .apple-icon:hover{
-      color:white;
-    }
     .main-nav-list{
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       height: 40px;
+      width: 100%;
+      position: relative;
       .nav-list-close{
         display: none;
       }

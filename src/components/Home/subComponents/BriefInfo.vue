@@ -1,25 +1,30 @@
 <template>
-  <div class="_box" :style="'background-color: ' + String(backgroundColor) + '; background: #747bff url(' + imgSrc + ') no-repeat; background-size: cover; width:100%; height: 100%; object-fit: cover'" >
-    <div v-if="!showAlert">
+  <div v-if="!showAlert">
+      <div class="_box_" :style="'background-color: ' + String(backgroundColor) + '; background: url(' + imgSrc + ') no-repeat; ' +
+   'background-size: cover; width:100%; height: 100%; object-fit: cover;'" >
       <MiniTitle :header-title="headerTitle" :header-info="headerInfo" :header-font-color="headerFontColor" :header-title-font-size="headerTitleFontSize" :show-alert="showAlert"/>
+      </div>
     </div>
 
-<!--    下面是可能会出现弹窗的情况-->
-    <div v-else>
+  <!-- 下面是可能会出现弹窗的情况-->
+  <div v-else>
+      <div class="_box" :style="'background-color: ' + String(backgroundColor) + '; background: url(' + imgSrc + ') no-repeat; ' +
+   'background-size: cover; width:100%; height: 100%; object-fit: cover;'" >
       <MiniTitle :header-title="headerTitle" :header-info="''" :header-font-color="headerFontColor" :header-title-font-size="headerTitleFontSize"
                    :show-alert="showAlert" :alert-content="headerInfo" :alert-content-img-list="alertContentImgList" @alerted="getAlertState"
                   :there-exists-an-alert="thereExistsAnAlert"/>
+      </div>
     </div>
-  </div>
+
 </template>
 
 <script>
 import MiniTitle from "~/components/CoComponents/MiniTitle.vue";
-import Alert_ from "~/components/CoComponents/Alert_.vue";
+import Alert from "~/components/CoComponents/Alert.vue";
 export default {
   name: "ServiceInfo",
   components:{
-    MiniTitle, Alert_
+    MiniTitle, Alert
   },
   data(){
     return{
@@ -62,12 +67,26 @@ export default {
   justify-content: center;
   align-items: center;
   min-height: 500px;
-  padding-top:10%;
-  margin-bottom: 13px;
-
-
+  padding-top: 10%;
+  margin-bottom: 3vh;
   border-radius: 5%;
-
 }
 
+
+._box_{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction:column-reverse;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  padding-top:10%;
+  margin-bottom: 4vh;
+  border-radius: 5%;
+  transition: all 0.3s;
+}
+._box_:hover{
+  transform: scale(1.1);
+}
 </style>

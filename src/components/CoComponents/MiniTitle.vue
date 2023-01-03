@@ -11,7 +11,7 @@
 
     <div v-if="showAlert">
       <div @click="$router.push('/')">
-        <Alert_ :hint-txt="'点击查看详情 >'" :alert-content="alertContent" :alert-title="headerTitle" @alerted="getAlertState"
+        <Alert :hint-txt="'点击查看详情 >'" :alert-content="alertContent" :alert-title="headerTitle" @alerted="getAlertState"
                 :alert-content-img-list="alertContentImgList" :there-exists-an-alert="thereExistsAnAlert"/>
       </div>
     </div>
@@ -26,8 +26,7 @@
 
 
 <script>
-import Alert from '~/components/CoComponents/Alert.vue'
-import Alert_ from "~/components/CoComponents/Alert_.vue";
+import Alert from "~/components/CoComponents/Alert.vue";
 export default {
   data(){
     return{
@@ -46,7 +45,7 @@ export default {
     'thereExistsAnAlert'
   ],
   components:{
-    Alert, Alert_,
+    Alert,
   },
   methods:{
     /**
@@ -75,7 +74,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
   font-size: 2em;
   z-index: 1;
   .headerTitle{
@@ -94,8 +92,8 @@ export default {
     color: rgb(40, 151, 255);
   }
 
-
 }
+
 
 @media only screen and (max-width: 800px){}
 </style>

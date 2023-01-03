@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "Me"
+  name: "com_2"
 }
 </script>
 
