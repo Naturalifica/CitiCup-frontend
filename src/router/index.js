@@ -5,6 +5,8 @@ import Strategy from "~/components/Strategy/Strategy.vue";
 import Account from "~/components/Account/Account.vue";
 import Risk from "~/components/Risk/Risk.vue";
 import Market from "~/components/Market/Market.vue";
+import Register from "../components/Account/Register.vue";
+import Login from "../components/Account/Login.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,7 +40,17 @@ const router = createRouter({
             path: '/market',
             name: 'market',
             component: Market
-        }
+        },
+        {
+            path: '/register',
+            name: 'register',
+            component: Register
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: Login
+        },
     ]
 })
 

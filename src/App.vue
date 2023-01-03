@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-<!--    <com_1/>-->
     <NavTop/>
     <router-view></router-view>
     <Footer/>
@@ -10,11 +9,10 @@
 <script>
 import NavTop from "./components/CoComponents/NavTop.vue"
 import Footer from "./components/CoComponents/Footer.vue"
-import com_1 from "~/components/Trial/com_1.vue";
 export default {
   name: 'App',
   components: {
-    NavTop, Footer, com_1
+    NavTop, Footer
   }
 }
 </script>
