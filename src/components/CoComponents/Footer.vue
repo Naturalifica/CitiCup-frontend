@@ -2,7 +2,7 @@
   <div class="main-footer _main-footer">
     <div class="footer-body _footer-body">
       <div>
-        <h1>关于我们</h1>
+        <h1 style="cursor: pointer" @click="$router.push('about')">关于我们</h1>
         <p>为客户保驾护航</p>
         <p>风控全流程分析</p>
         <p>全流程风控解决方案</p>
@@ -10,10 +10,10 @@
       </div>
       <div>
         <h1>做市服务</h1>
-        <p>行情揭示</p>
-        <p>交易管理</p>
-        <p>策略管理</p>
-        <p>风险控制</p>
+        <p style="cursor: pointer" @click="$router.push('market')">行情揭示</p>
+        <p style="cursor: pointer" @click="$router.push('trading')">交易管理</p>
+        <p style="cursor: pointer" @click="$router.push('strategy')">策略管理</p>
+        <p style="cursor: pointer" @click="$router.push('risk')">风险控制</p>
       </div>
       <div>
         <h1>特色模块</h1>
