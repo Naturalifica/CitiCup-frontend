@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../components/Home/Home.vue'
-import Trading from "~/components/Trading/Trading.vue";
-import Strategy from "~/components/Strategy/Strategy.vue";
-import Account from "~/components/Account/Account.vue";
-import Risk from "~/components/Risk/Risk.vue";
-import Market from "~/components/Market/Market.vue";
-import Register from "../components/Account/Register.vue";
-import Login from "../components/Account/Login.vue";
+import Trading from "../components/Trading/Trading.vue";
+import Strategy from "../components/Strategy/Strategy.vue";
+import Account from "../components/Account/Account.vue";
+import Risk from "../components/Risk/Risk.vue";
+import Market from "../components/Market/Market.vue";
+import Register from "../components/Account/subComponents/Register.vue";
+import Login from "../components/Account/subComponents/Login.vue";
+import About from "../components/About/About.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -42,15 +43,20 @@ const router = createRouter({
             component: Market
         },
         {
-            path: '/register',
+            path: '/account/register',
             name: 'register',
             component: Register
         },
         {
-            path: '/login',
+            path: '/account/login',
             name: 'login',
             component: Login
         },
+        {
+            path: '/about',
+            name: 'about',
+            component: About
+        }
     ]
 })
 

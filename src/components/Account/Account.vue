@@ -4,7 +4,7 @@
       <div class="sub-title">账户管理</div>
       <div v-if="this.$store.state.isLogin"></div>
       <div v-else>
-        <router-link to="/login" style="font-size: large; color: #409EFF">点击登录</router-link>
+        <router-link to="/account/login" style="font-size: large; color: #409EFF">点击登录</router-link>
       </div>
     </div>
   </div>

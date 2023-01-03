@@ -13,7 +13,7 @@
             </el-form-item>
             <el-button type="primary" text style="font-size: medium" @click="submitForm(form)"
             >登录</el-button>
-            <el-button type="primary" text style="font-size: medium" @click="$router.push('register')"
+            <el-button type="primary" text style="font-size: medium" @click="$router.push('/account/register')"
             >注册</el-button>
           </el-form>
         </div>
