@@ -1,6 +1,6 @@
 
 <template>
-  <div style="background: url('src/components/Home/images/earth_.jpg') center">
+  <div style="background: url('src/components/Home/images/earth_.jpg') no-repeat fixed;">
 
     <Carousel :img-list="imgList" :height="'100vh'" :z-index="1"/>
 
